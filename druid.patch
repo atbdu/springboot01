@@ -1,0 +1,14 @@
+Index: src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/application.yml	(revision 7c14de494ae1db97e568847277b03ecf8cc45202)
++++ src/main/resources/application.yml	(date 1630162303780)
+@@ -1,5 +1,5 @@
+ server:
+-  port: 8081
++  port: 8080
+ spring:
+   datasource:
+     username: part
