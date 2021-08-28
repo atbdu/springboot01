@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: part
+    password: 09a3vM#gPi41tGuY
+    url: jdbc:mysql://123.60.37.212:3306/gcj_zgb_test?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #SpringBoot默认注入的不是这些配置，需要手工绑定
+    #druid 德鲁伊专有配置
+    initialSize: 5  #初始化大小
+    minIdle: 5 #
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    uerGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
